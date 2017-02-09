@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
  * @author tomama
  */
 public class ATMKU extends javax.swing.JFrame {
+    public int tab=50000;
 
     /**
      * Creates new form ATMKU
@@ -30,37 +31,73 @@ public class ATMKU extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        labelpin = new javax.swing.JLabel();
-        pin = new javax.swing.JTextField();
-        lanjut = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        tfsaldo = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
+        tfisi = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        tfsetor = new javax.swing.JButton();
+        tfambil = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tekton Pro", 1, 18)); // NOI18N
-        jLabel1.setText("   Anjungan Tunai Mandiri - BNI Syariah Bojonegoro");
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "INFORMASI SALDO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
+        jPanel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
-        jLabel2.setText("Masukkan jumlah penyetoran");
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setText("Rp");
 
-        jButton2.setLabel("Lanjut");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        tfsaldo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        tfsaldo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tfsaldo.setText("50000");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tfsaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tfsaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(10, 200, 250, 110);
+        jPanel1.getAccessibleContext().setAccessibleName("INFORMASI SALDO");
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PENGAMBILAN & PENYETORAN", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setText("Rp");
+
+        tfsetor.setText("Setor");
+        tfsetor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                tfsetorActionPerformed(evt);
+            }
+        });
+
+        tfambil.setText("Ambil");
+        tfambil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfambilActionPerformed(evt);
             }
         });
 
@@ -68,219 +105,114 @@ public class ATMKU extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addComponent(jButton2)))
-                .addContainerGap(70, Short.MAX_VALUE))
+                        .addGap(10, 10, 10)
+                        .addComponent(tfsetor)
+                        .addGap(57, 57, 57)
+                        .addComponent(tfambil))
+                    .addComponent(tfisi, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(65, 65, 65))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jLabel2)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tfisi, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2)
-                .addContainerGap(34, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Penyetoran", jPanel2);
-
-        jLabel5.setText("Cara Penggunaan Aplikasi");
-
-        jLabel6.setText("[2] Bertransaksilah dengan benar sesuai pilihan");
-
-        jLabel7.setText("[3] Gunakan uang sesuai kebutuhan dan rajinlah menabung");
-
-        jLabel8.setText("[1] Masukkan PIN dengan benar");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jLabel5))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7))))
-                .addContainerGap(15, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel8)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel6)
-                .addGap(20, 20, 20)
-                .addComponent(jLabel7)
-                .addContainerGap(63, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Petunjuk", jPanel4);
-
-        labelpin.setText("Masukkan PIN Anda ");
-
-        pin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pinActionPerformed(evt);
-            }
-        });
-
-        lanjut.setText("OKE");
-        lanjut.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lanjutActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(labelpin))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(pin, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(154, 154, 154)
-                        .addComponent(lanjut)))
-                .addContainerGap(81, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(labelpin)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(pin, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lanjut)
-                .addContainerGap(38, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Informasi Saldo", jPanel1);
-
-        jLabel3.setText("Masukkan jumlah penarikan");
-
-        jButton1.setText("Lanjut");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jLabel3))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(89, 89, 89)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(155, 155, 155)
-                        .addComponent(jButton1)))
-                .addContainerGap(51, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Penarikan", jPanel3);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 965, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tfsetor)
+                    .addComponent(tfambil))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jTabbedPane1)
-                .addContainerGap())
-        );
 
-        pack();
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(290, 200, 343, 110);
+
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton3.setText("Petunjuk");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3);
+        jButton3.setBounds(0, 0, 110, 40);
+
+        jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton4.setText("Keluar");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton4);
+        jButton4.setBounds(570, 340, 80, 50);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setText("   Anjungan Tunai Mandiri - BNI Syariah Bojonegoro");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(130, 30, 427, 19);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("D:\\Download\\image\\muda-menabung-tua-beruntung1.jpg")); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, -10, 660, 410);
+
+        setBounds(0, 0, 664, 432);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void pinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pinActionPerformed
+    private void tfambilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfambilActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_pinActionPerformed
-
-    private void lanjutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lanjutActionPerformed
-        // TODO add your handling code here:
-        String str;
-        int tab=500000;
-        int pin=1234;
-    
-        try {
-            JOptionPane.showMessageDialog(null,"Saldo Anda sebesar "+tab, "penarikan",JOptionPane.INFORMATION_MESSAGE);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error"+e,"Salah input PIN", JOptionPane.WARNING_MESSAGE);
-        }
+        int ambil ;
+        ambil= Integer.parseInt(tfisi.getText());
         
-    }//GEN-LAST:event_lanjutActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        String str;
-        int tab=500000;
-
-        try {
-            JOptionPane.showMessageDialog(null,"Jumlah Penarikan sebesar : Rp"+tab, "penarikan",JOptionPane.INFORMATION_MESSAGE);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error"+e,"Salah input", JOptionPane.WARNING_MESSAGE);
+        if (ambil%100!=0)
+            JOptionPane.showMessageDialog(null, "Maaf tidak menyediakan uang logam \n Silahkan ulangi kembali!", "Transaksi gagal",0);
+        else if (ambil <50000)
+            JOptionPane.showMessageDialog(null,"Besaran minimal pengambilan adalah Rp 50.000,00","ERROR",0);
+        else if (ambil >tab)
+            JOptionPane.showMessageDialog(null, "Anda berhutang kepada BANK BNI Syariah Kami", "Jangan lupa membayarnya",0);
+        {
+            tab-=ambil;
+            JOptionPane.showMessageDialog(null, "Saldo Anda saat ini sebesar : " + tab);
+            tfsaldo.setText(""+tab);
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_tfambilActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void tfsetorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfsetorActionPerformed
+        // TODO add your handling code here:
+        int setor ;
+        setor= Integer.parseInt(tfisi.getText());
+        
+        if (setor%100!=0)
+            JOptionPane.showMessageDialog(null, "Maaf tidak menyediakan uang logam \n Silahkan ulangi kembali!", "Transaksi gagal",0);
+        else if (setor <50000)
+            JOptionPane.showMessageDialog(null,"Besaran minimal penyetoran adalah Rp 50.000,00","ERROR",0);
+        else if (setor>=50000)
+        {
+            tab+=setor;
+            JOptionPane.showMessageDialog(null, "Saldo Anda saat ini sebesar : " + tab);
+            tfsaldo.setText(""+tab);
+        }
+    }//GEN-LAST:event_tfsetorActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null,"Cara Penggunaan Aplikasi \n [1] Masukkan PIN dengan benar \n [2]"
+                            + "Bertransaksilah dengan benar sesuai pilihan \n [3] Gunakan Uang sesuai kebutuhan dan"
+                            + "rajinlah menabung \n","INFO",1);
+                              
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -312,30 +244,32 @@ public class ATMKU extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ATMKU().setVisible(true);
-            }
+  int pin ;
+  String str;
+   
+  str = JOptionPane.showInputDialog(null, "Masukkan 4 Digit PIN Anda:","ATM BNI SYARIAH-BOJONENOGO",0);
+  pin = Integer.parseInt(str);
+  
+  //meghitung kesempatan login
+   
+  if (pin==1234)
+      new ATMKU().setVisible(true);
+      }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JLabel labelpin;
-    private javax.swing.JButton lanjut;
-    private javax.swing.JTextField pin;
+    private javax.swing.JButton tfambil;
+    private javax.swing.JTextField tfisi;
+    private javax.swing.JTextField tfsaldo;
+    private javax.swing.JButton tfsetor;
     // End of variables declaration//GEN-END:variables
 }
